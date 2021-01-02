@@ -1,0 +1,107 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Nanum Gothic", sans-serif;
+}
+#bg {
+  position: relative;
+  margin: auto;
+  background-color: lightblue;
+  text-align: center;
+  width: 300px;
+  height: 600px;
+  border: 1px solid lightblue;
+}
+/* 접속 유무 */
+.connect,
+.disconnect {
+  text-align: center;
+}
+.connect span {
+  background-color: papayawhip;
+}
+.disconnect span {
+  background-color: rgb(82, 112, 122);
+  color: #fff;
+}
+.connect span.user-name,
+.disconnect span.user-name {
+  display: none;
+}
+/* 채팅 작성 영역 */
+.text-box {
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 -5px 10px -5px lightslategray;
+}
+#text {
+  position: absolute;
+  width: 240px;
+  left: 10px;
+  height: 40px;
+  border: 0;
+}
+#text:focus,
+.text-box button:focus {
+  outline: none;
+}
+.text-box button {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  height: 34px;
+  padding: 0 10px;
+  border-radius: 3px;
+  color: #eee;
+  font-size: 12px;
+  border: 0;
+  background-color: #303952;
+  cursor: pointer;
+}
+.text-box button:hover {
+  background-color: #596275;
+}
+.text-box button:active {
+  transform: scale(0.98);
+}
+
+/* 작성된 채팅 말풍선 */
+#chat-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow: auto;
+  text-align: left;
+  padding: 10px;
+  height: 540px;
+}
+ul#chat-box li {
+  margin-bottom: 12px;
+}
+.user-name,
+.user-chat,
+.user-me {
+  display: inline;
+  font-size: 13px;
+  padding: 5px 8px;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px lightskyblue;
+}
+.user-name {
+  background-color: #596275;
+  border-radius: 100px;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.user-chat {
+  background-color: #fff;
+}
+.user-me {
+  background-color: #ebffee;
+}
